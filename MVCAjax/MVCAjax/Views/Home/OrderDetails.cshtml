@@ -1,0 +1,27 @@
+﻿@using MVCAjax.Models;
+
+@{
+    ViewBag.Title = "OrderDetails";
+}
+
+<h2>OrderDetails</h2>
+
+@model OrderModel
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Order ID</th>
+        <th>Order Date</th>
+        <th>Shipping Date</th>
+        <th>Shipped To</th>
+    </tr>
+    @foreach (var item in Model.Order)
+    {
+        <tr>
+            <td>@item.OrderId</td>
+            <td>@item.OrderDate</td>
+            <td>@item.ShippingDate</td>
+            <td>@item.ShippedTo</td>
+        </tr>
+    }
+</table>

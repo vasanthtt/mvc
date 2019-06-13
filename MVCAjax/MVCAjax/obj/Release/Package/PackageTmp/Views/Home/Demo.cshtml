@@ -1,0 +1,40 @@
+﻿
+    @using MVCAjax.Models;
+
+@model CustomerModel
+@{
+    ViewBag.Title = "Demo";
+}
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/Ajaxcalls.js"></script>
+</head>
+<body>
+    <div id="viewPlaceHolder"></div>
+    <br /><br />
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Customer ID</th>
+            <th>Company Name</th>
+            <th colspan="2">Actions</th>
+        </tr>
+        @foreach (var item in Model.Customers)
+        {
+            <tr>
+                <td>@item.CustomerId</td>
+                <td>@item.CompanyName</td>
+                <td>
+                    <input type="button" class="customerDetails"
+                           value="Customer Details" />
+                </td>
+                <td>
+                    <input type="button" class="orderDetails"
+                           value="Order Details" />
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

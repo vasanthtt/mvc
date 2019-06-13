@@ -1,0 +1,28 @@
+﻿@using MVCAjax.Models;
+@{
+    ViewBag.Title = "CustomerDetails";
+}
+
+<h2>CustomerDetails</h2>
+
+
+@model CustomerDetailsModel
+
+<table border="1" cellpadding="10">
+    <tr>
+        <td>Customer ID :</td>
+        <td>@Model.Customer.CustomerId</td>
+    </tr>
+    <tr>
+        <td>Company Name :</td>
+        <td>@Model.Customer.CompanyName</td>
+    </tr>
+    <tr>
+        <td>Contact Name :</td>
+        <td>@Model.Customer.ContactName</td>
+    </tr>
+    <tr>
+        <td>Country :</td>
+        <td>@Model.Customer.Country</td>
+    </tr>
+</table>
